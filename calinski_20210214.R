@@ -65,7 +65,7 @@ plot.calinski <- function(obj, add = FALSE, from = 1, to = floor(0.75 * attr(obj
     }
     
     text(xx, obj, nums, col = ccol)
-    return(NULL)
+    invisible(NULL)
   }
 
 print.calinski <- function (obj) {
