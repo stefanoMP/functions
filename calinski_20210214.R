@@ -38,7 +38,7 @@ calinski <- function (hhc, gMax = NULL) {
 }
 
 plot.calinski <- function (obj, add = FALSE, from = 1, to = floor(0.75 * attr(obj, "noof_items")), 
-                           height = 0.6, shift = 0.25, max_height <- max(attr(obj, "heights"))) {
+                           height = 0.6, shift = 0.25, max_height = max(attr(obj, "heights"))) {
     
     if(!add) {
       plot(unclass(obj), type = "l", col = "grey", main = "Calinski & Harabasz curve", xlab = "number of groups", ylab = "CH scores")
