@@ -31,7 +31,7 @@ calinski <- function (hhc, gMax = NULL) {
   
   class(ans) <- "calinski"
   attr(ans, "noof_items") <- n
-  attr(ans, "heights") <- hhc$height
+#  attr(ans, "heights") <- hhc$height
   attr(ans, "distance") <- attr(dist, "method")
   
   return(ans)
@@ -75,7 +75,8 @@ print.calinski <- function (obj) {
     check <- obj[g - 1] < obj[g] & obj[g + 1] < obj[g]
     if(check) maxima <- c(maxima, g)
   }
-  message("Suggested no. of groups: ", maxima)
+#  message("Suggested no. of groups: ", maxima) # 20210214
+  message("Suggested no. of groups: ", paste(maxima, collapse = ", ")) # 20210315
 }
   
 #hc <- hclust(dist(USArrests), "ward.D2")
