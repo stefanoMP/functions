@@ -50,7 +50,7 @@ plot.calinski <- function(obj, add = FALSE, from = 1, to = floor(0.75 * attr(obj
     nums <- paste(1:G); nums[1] <- ""
     xx <- 1:G
   
-    if(add) obj <- aCalinski/max(obj) * height * max_height
+    if(add) obj <- obj/max(obj) * height * max_height
     
     ccol <- rep("black", G)
     for (g in 2:(G - 1)) {
